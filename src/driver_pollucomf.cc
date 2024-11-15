@@ -30,7 +30,7 @@ namespace
         di.setMeterType(MeterType::HeatMeter);
         di.addLinkMode(LinkMode::T1);    // default
         di.addLinkMode(LinkMode::C1);
-        di.addLinkMode(LinkMode::MBUS);  // optional hw module
+        // di.addLinkMode(LinkMode::MBUS);  // optional hw module
         di.addDetection(MANUFACTURER_SEN, 0x04,  0x1d);
         di.setConstructor([](MeterInfo& mi, DriverInfo& di){ return shared_ptr<Meter>(new Driver(mi, di)); });
     });
